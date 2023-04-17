@@ -3,4 +3,6 @@
 
 ### Trabajado con HTML, CSS, BOOTSTRAP y JAVASCRIPT.
 ![image text](./imagenes/ejemplo-de-pagina.png)
+
+## Vista movil
 ![image text](./imagenes/pagina-movil.png)
