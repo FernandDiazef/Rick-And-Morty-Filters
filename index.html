@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./imagenes/rick_morty_PNG24.ico">
+    <title>Rick And Morty</title>
+</head>
+<body>
+        <div class="d-flex justify-content-center divImg">
+            <img src="./imagenes/Rick_and_Morty.svg.png" class="img-fluid" alt="Rick_and_Morty" >
+        </div>
+        <div class="d-flex justify-content-center mb-4" style="gap: 10px;">
+            <button id="Regresar" class="btn btn-success w-25 botonDeCambio">Atras</button>
+            <button id="Siguiente" class="btn btn-success w-25 botonDeCambio" >Siguiente</button>
+        </div>
+        <div class="d-flex justify-content-center mb-3" style="gap: 10px;">
+            <input id="barrabuscar" class="w-75  inputStyle" type="text" placeholder="Ingrese un Nombre">
+            <button id="buscar" class="btn btn-primary botonDeBuscar" style="width: 8em;">buscar</button>
+        </div>
+        
+        <div class="container-fluid d-flex   flex-column flex-md-row ">
+            <div class="row w-25 d-flex flex-column mb-3 w-auto m-1" >
+                <div class="mt-5 col-11 d-flex justify-content-center flex-column align-items-center sticky-md-top" style="top: 1em">
+                    <h3 style="color: #80FF00;" >Filters</h3>
+                    <a class="text-white opacity-75" href="">Clear Filters</a>
+                </div>
+                <div class="col-11 d-flex justify-content-center justify-content-md-start" style="position: sticky; top: 5rem;">
+                    <div class="accordion mt-5 " id="accordionExample">
+                        <div class="accordion-item w-100">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button text-white " style="background-image: url(./imagenes/starfall-gif-41.gif);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Status
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="background-image: url(./imagenes/starfall-gif-41.gif);">
+                                <!-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="button">Alive</button>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="button">Dead</button>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="button">Unknown</button> -->
+                                <div class="btn-group " role="group" aria-label="Basic radio toggle button group">
+                                    <div class="w-100">
+                                      <input type="radio" class="btn-check " style="gap:5px;" name="status" id="btnradio1" autocomplete="off" >
+                                      <label class="btn btn-outline-success" for="btnradio1">Alive</label>
+                                      
+                                      <input type="radio" class="btn-check"  name="status" id="btnradio2" autocomplete="off">
+                                      <label class="btn btn-outline-danger" for="btnradio2">Dead</label>
+
+                                      <input type="radio" class="btn-check" name="status" id="btnradio3" autocomplete="off">
+                                      <label class="btn btn-outline-secondary" for="btnradio3">Unknown</label>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed text-white" style="background-image: url(./imagenes/starfall-gif-41.gif);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Species
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="background-image: url(./imagenes/starfall-gif-41.gif);">
+                                <div class="btn-group " role="group" aria-label="Basic radio toggle button group">
+                                    <div class="w-100">
+                                      <input value="alive" type="radio" class="btn-check" name="species" id="btnradio4" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio4">Alien</label>
+                                    
+                                      <input type="radio" class="btn-check" name="species" id="btnradio5" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio5">Human</label>
+                                    
+                                      <input type="radio" class="btn-check" name="species" id="btnradio6" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio6">Unknown</label>
+                                    </div>
+                                </div>
+                                <div class="mt-3 btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <div class="w-100">
+                                      <input type="radio" class="btn-check" name="species" id="btnradio7" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio7">Robot</label>
+      
+                                      <input type="radio" class="btn-check" name="species" id="btnradio8" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio8">Humanoid</label>
+      
+                                      <input type="radio" class="btn-check" name="species" id="btnradio9" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio9">Animal</label>
+                                    </div>
+                                </div>
+                                <div class="mt-3 btn-group " role="group" aria-label="Basic radio toggle button group">
+                                    <div class="w-100">
+                                      <input type="radio" class="btn-check" name="species" id="btnradio10" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio10">Mythological</label>
+      
+                                      <input type="radio" class="btn-check" name="species" id="btnradio11" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio11">Disease</label>
+      
+                                      <input type="radio" class="btn-check" name="species" id="btnradio12" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio12">Cronenberg</label>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed text-white" style="background-image: url(./imagenes/starfall-gif-41.gif);" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Gender
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="background-image: url(./imagenes/starfall-gif-41.gif);">    
+                                <div class="mt-3 btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <div class=" w-100">
+                                      <input type="radio" class="btn-check" name="gender" id="btnradio13" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio13">Female</label>
+      
+                                      <input type="radio" class="btn-check" name="gender" id="btnradio14" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio14">Male</label>
+      
+                                      <input type="radio" class="btn-check" name="gender " id="btnradio15" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio15">Unknown</label>
+
+                                      <input type="radio" class="btn-check " name="gender" id="btnradio16" autocomplete="off">
+                                      <label class="btn btn-outline-primary" for="btnradio16">Genderless</label>
+                                    </div>
+                                </div>       
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="container2 row w-100 d-flex justify-content-center text-white "></div>        
+        </div>
+        
+
+    <script src="index.js"></script>
+    <script src="./dist/js/bootstrap.min.js"></script>
+</body>
+</html>

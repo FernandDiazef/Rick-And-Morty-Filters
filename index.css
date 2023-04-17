@@ -1,0 +1,48 @@
+/* ajuste de body */
+body {
+    margin: 0;
+    background-image: url(./imagenes/starfall-gif-41.gif);
+    text-align: center;
+}
+/* creacion de hover de boton atras y siguiente */
+.botonDeCambio:hover {
+    background-color:   #072;
+}
+/* creacion de active de boton atras y siguiente */
+.botonDeCambio:active {
+    background:linear-gradient(to bottom, transparent, #333);
+}
+/* creacion de hover de boton buscar */
+.botonDeBuscar:hover {
+    background-color:  #0047b3;
+}
+/* creacion de active de boton buscar */
+.botonDeBuscar:active {
+    background:linear-gradient(to bottom, transparent,	 #006666);
+}
+/* ajuste de una imagen de fondo de un div */
+.divImg {
+    background-image: url(./imagenes/rick_morty_PNG39.png);
+    background-position: 47%;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+}
+/* ajuste del tamaño de las imagenes del API de Rick and Morty */
+.tamañoimg {
+    height: 11em;
+}
+/* ajuste del inputstyle */
+.inputStyle {
+    text-align: center;
+    border: none;
+    border-bottom: 3px solid lightslategray ;
+    color: white;
+    background-color: transparent;
+}
+/* creacion de un focus de inputstyle */
+.inputStyle:focus {
+    outline: none;
+    background: linear-gradient(to bottom, transparent, #333);
+    border-bottom: 3px solid lightskyblue;
+}
